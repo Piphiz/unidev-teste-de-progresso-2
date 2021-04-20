@@ -23,7 +23,11 @@ class Geometry
      */
     public static function triangleArea($base, $height)
     {
-        // Seu código aqui...
+        if(!is_numeric($base) || !is_numeric($height) || $base < 0 || $height < 0) {
+            throw new Exception('Apenas valores numéricos são aceitos!');
+        }
+
+        return ($base * $height)/2;
     }
 
     /**
@@ -32,6 +36,10 @@ class Geometry
      */
     public static function circleArea($radius)
     {
-        // Seu código aqui...
+        if(!is_numeric($radius) || $radius < 0) {
+            throw new Exception('Apenas valores numéricos são aceitos!');
+        }
+
+        return number_format(pi()*pow($radius,2), 3, '.', ' ');
     }
 }

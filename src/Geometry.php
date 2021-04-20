@@ -40,6 +40,6 @@ class Geometry
             throw new Exception('Apenas valores numéricos são aceitos!');
         }
 
-        return number_format(pi()*pow($radius,2), 3, '.', ' ');
+        return round(pi()*pow($radius,2), 3);
     }
 }

@@ -27,7 +27,7 @@ class BonusCalculator
             throw new Exception('Apenas valores numéricos são aceitos!');
         }
         $bonus = 0;
-        if($salary > 9999){
+        if($salary >= 10000){
             $bonus = 0;
         }else{
             switch($totalChildren)
